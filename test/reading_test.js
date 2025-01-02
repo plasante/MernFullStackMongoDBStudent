@@ -1,5 +1,6 @@
 const assert = require('assert');
 const Student = require('../src/student');
+require('./deleteAllStudents')
 
 describe('Read student table', () => {
   let student;

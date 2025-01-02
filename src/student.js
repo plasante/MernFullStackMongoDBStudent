@@ -3,7 +3,8 @@ const {Schema} = require("mongoose");
 const schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
-  name: String
+  name: String,
+  studentNumber: Number,
 })
 
 const Student = mongoose.model('Student', StudentSchema);

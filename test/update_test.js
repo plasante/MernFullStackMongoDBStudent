@@ -1,9 +1,8 @@
 const assert = require('assert');
 const Student = require('../src/student');
-//require('../test/deleteAllStudents')();
+require('../test/deleteAllStudents')();
 
 describe('Updating students', function() {
-  this.timeout(5000);
   let student;
   let student2;
 

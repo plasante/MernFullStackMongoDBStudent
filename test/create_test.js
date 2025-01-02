@@ -1,5 +1,6 @@
 const assert = require('assert');
 const Student = require('../src/student');
+require('../test/deleteAllStudents')();
 
 describe('Create the first student record', () => {
   it('Save the student', (done) => {

@@ -3,7 +3,16 @@ const {Schema} = require("mongoose");
 const schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
-  name: String,
+  name: {
+    type: String,
+    required: [true, 'Name is required'],
+    validate: {
+      validator: function(name) {
+        return name.length > 2;
+      },
+      message: 'Name is too short'
+    }
+  },
   studentNumber: Number,
   articleCount: Number,
   grade: Number

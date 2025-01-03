@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const {Schema} = require("mongoose");
-const schema = mongoose.Schema;
 const ArticleSchema = require("./article_schema");
 
 const StudentSchema = new Schema({
@@ -17,7 +16,7 @@ const StudentSchema = new Schema({
   studentNumber: Number,
   articleCount: Number,
   grade: Number,
-  articles: {ArticleSchema}
+  articles: [ArticleSchema]
 })
 
 const Student = mongoose.model('Student', StudentSchema);

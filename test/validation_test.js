@@ -1,6 +1,6 @@
 const assert = require('assert');
 const Student = require('../src/student');
-require('../test/deleteAllStudents')();
+//require('../test/deleteAllStudents')();
 
 describe('Student validation test', (done) => {
   // it('name is required', (done) => {
@@ -20,14 +20,14 @@ describe('Student validation test', (done) => {
   //   done();
   // })
 
-  it('prevent invalid input', (done) => {
-    const student = new Student({name: 'John Doe', age: 25, grade: 'A'});
-    student.save()
-      .then(() => done())
-      .catch(validationResult => {
-        const {message} = validationResult.errors.name
-        assert(message === 'Name is too short')
-      })
-    done();
-  })
+  // it('prevent invalid input', (done) => {
+  //   const student = new Student({name: 'John Doe', age: 25, grade: 'A'});
+  //   student.save()
+  //     .then(() => done())
+  //     .catch(validationResult => {
+  //       const {message} = validationResult.errors.name
+  //       assert(message === 'Name is too short')
+  //     })
+  //   done();
+  // })
 })

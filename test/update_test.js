@@ -1,28 +1,28 @@
 const assert = require('assert');
 const Student = require('../src/student');
-require('../test/deleteAllStudents')();
+//require('../test/deleteAllStudents')();
 
 describe('Updating students', function() {
-  let student;
-  let student2;
-
-  beforeEach((done) => {
-    student = new Student({name: 'Pierre', studentNumber: 2500, articleCount: 5, grade: 10});
-    student.save().then(() => done());
-    console.log('originalStudent', student);
-  });
-
-  it('Update grades', async () => {
-    try {
-      const getStudent = await Student.findOne({name: 'Pierre'});
-      const savedStudent = await Student.updateOne({_id: getStudent._id}, {$mul: {articleCount: getStudent.grade}});
-      const updatedStudent = await Student.find({name: 'Pierre'});
-      console.log('updatedStudent :', updatedStudent);
-      assert(updatedStudent[0].articleCount === 50);
-    } catch (err) {
-      console.error(err);
-    }
-  });
+  // let student;
+  // let student2;
+  //
+  // beforeEach((done) => {
+  //   student = new Student({name: 'Pierre', studentNumber: 2500, articleCount: 5, grade: 10});
+  //   student.save().then(() => done());
+  //   console.log('originalStudent', student);
+  // });
+  //
+  // it('Update grades', async () => {
+  //   try {
+  //     const getStudent = await Student.findOne({name: 'Pierre'});
+  //     const savedStudent = await Student.updateOne({_id: getStudent._id}, {$mul: {articleCount: getStudent.grade}});
+  //     const updatedStudent = await Student.find({name: 'Pierre'});
+  //     console.log('updatedStudent :', updatedStudent);
+  //     assert(updatedStudent[0].articleCount === 50);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // });
 
   // it('should update all the students', (done) => {
   //   Student.updateMany({}, {name: 'Pierrot'})

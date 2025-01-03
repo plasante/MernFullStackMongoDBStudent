@@ -1,14 +1,14 @@
 const assert = require('assert');
 const Student = require('../src/student');
-require('../test/deleteAllStudents')();
+//require('../test/deleteAllStudents')();
 
 describe('Delete a student record', (done) => {
-  let student;
-
-  beforeEach((done) => {
-    student = new Student({name: 'jj'});
-    student.save().then(() => done());
-  });
+  // let student;
+  //
+  // beforeEach((done) => {
+  //   student = new Student({name: 'jj'});
+  //   student.save().then(() => done());
+  // });
 
   // it('should delete a student record by id', (done) => {
   //   Student.findByIdAndDelete(student._id)
